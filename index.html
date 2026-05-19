@@ -1,4 +1,201 @@
 <!DOCTYPE html>
-<html><head><title>Cake Délice</title></head>
-<body><h1>Cake Délice — Site en construction</h1></body>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cake Délice — Pâtisserie Artisanale Sur Mesure Paris</title>
+<meta name="description" content="Cake Délice, pâtisserie artisanale à Paris. Gâteaux de mariage, anniversaire et baptême 100% personnalisés par Lise.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#F4C2C2;--rose-deep:#E8A0A0;--gold:#D4AF37;--gold-light:#E8CC6A;--cream:#FAF6F0;--beige:#F0E8DC;--bordeaux:#8B2252;--dark:#2C1810;--text:#4A2C2A;--muted:#9B7B78;--white:#FFFFFF}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,246,240,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,175,55,0.2);padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--bordeaux);letter-spacing:1px;text-decoration:none}.logo span{color:var(--gold)}
+nav{display:flex;gap:32px;align-items:center}
+nav a{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text);text-decoration:none;transition:color .3s}nav a:hover{color:var(--bordeaux)}
+.nav-cta{background:var(--bordeaux);color:var(--white)!important;padding:10px 24px;border-radius:2px}
+.hero{min-height:100vh;background:linear-gradient(135deg,#2C1810 0%,#4A2C2A 40%,#8B2252 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hero-content{position:relative;z-index:1;max-width:780px}
+.hero-badge{display:inline-block;border:1px solid rgba(212,175,55,0.4);color:var(--gold-light);font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:8px 20px;border-radius:100px;margin-bottom:32px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,8vw,88px);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--rose);display:block}
+.hero p{font-size:clamp(15px,2vw,18px);font-weight:300;color:rgba(255,255,255,0.7);line-height:1.8;max-width:520px;margin:0 auto 48px}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--dark);padding:16px 36px;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .3s;display:inline-block}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(212,175,55,0.3)}
+.btn-secondary{border:1px solid rgba(255,255,255,0.3);color:var(--white);padding:16px 36px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .3s;display:inline-block}
+.btn-secondary:hover{border-color:var(--rose);color:var(--rose)}
+section{padding:100px 5%}
+.section-label{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:400;line-height:1.2;color:var(--dark);margin-bottom:16px}
+.section-title em{font-style:italic;color:var(--bordeaux)}
+.section-subtitle{font-size:16px;font-weight:300;color:var(--muted);line-height:1.7;max-width:520px}
+.text-center{text-align:center}.text-center .section-subtitle{margin:0 auto}
+.creations{background:var(--white)}
+.creations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px}
+.creation-card{background:var(--cream);padding:48px 36px;transition:all .4s;cursor:pointer;position:relative;overflow:hidden}
+.creation-card::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.creation-card:hover{background:var(--beige);transform:translateY(-4px)}.creation-card:hover::before{transform:scaleX(1)}
+.creation-icon{font-size:48px;display:block;margin-bottom:24px}
+.creation-card h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--dark);margin-bottom:12px}
+.creation-card p{font-size:14px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.creation-tag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.savoir-faire{background:linear-gradient(135deg,var(--bordeaux) 0%,#5C1438 100%);color:var(--white)}
+.savoir-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:60px}
+.savoir-values{display:flex;flex-direction:column;gap:24px;margin-top:40px}
+.value-item{display:flex;align-items:flex-start;gap:16px}
+.value-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--gold);line-height:1;min-width:40px}
+.value-content h4{font-size:14px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--rose);margin-bottom:4px}
+.value-content p{font-size:14px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.6}
+.savoir-visual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.visual-card{background:rgba(255,255,255,0.08);border:1px solid rgba(212,175,55,0.2);border-radius:4px;padding:32px 24px;text-align:center;transition:all .3s}
+.visual-card:hover{background:rgba(255,255,255,0.12)}.visual-card:first-child{grid-column:1/-1}
+.visual-num{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:var(--gold);line-height:1;display:block}
+.visual-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;display:block}
+.temo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.temo-card{background:var(--white);padding:36px;border-radius:4px;border:1px solid rgba(212,175,55,0.1);position:relative}
+.temo-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--rose);position:absolute;top:16px;left:28px;line-height:1;opacity:.4}
+.stars{font-size:14px;color:var(--gold);margin-bottom:16px;display:block}
+.temo-card p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;font-style:italic;color:var(--text);line-height:1.7;margin-bottom:24px;padding-top:16px}
+.temo-author{display:flex;align-items:center;gap:12px}
+.author-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--bordeaux));display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-family:'Cormorant Garamond',serif;font-weight:600}
+.author-name{font-weight:500;color:var(--dark);display:block;font-size:13px}.author-event{color:var(--muted);font-size:12px}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;margin-top:60px;align-items:start}
+.info-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
+.info-icon{width:40px;height:40px;background:var(--beige);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.info-label{font-weight:500;color:var(--dark);display:block;margin-bottom:2px;font-size:14px}.info-value{color:var(--muted);font-weight:300;font-size:14px}
+.contact-form{display:flex;flex-direction:column;gap:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:8px}
+.form-group label{font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.form-group input,.form-group select,.form-group textarea{background:var(--cream);border:1.5px solid rgba(44,24,16,0.1);border-radius:4px;padding:14px 16px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--text);transition:border-color .3s;outline:none;width:100%;appearance:none}
+.form-group textarea{min-height:120px;resize:vertical;line-height:1.6}
+.btn-form{background:var(--bordeaux);color:var(--white);border:none;padding:16px 32px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:all .3s;align-self:flex-start}
+.btn-form:hover{background:var(--gold);color:var(--dark);transform:translateY(-2px)}
+footer{background:var(--dark);padding:60px 5% 40px;color:rgba(255,255,255,0.6)}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:32px}
+.footer-col h4{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.footer-col a{display:block;font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:10px;transition:color .3s}.footer-col a:hover{color:var(--rose)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.socials{display:flex;gap:16px}
+.social-link{width:36px;height:36px;border:1px solid rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:all .3s}.social-link:hover{border-color:var(--rose)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){nav{display:none}.creations-grid,.temo-grid,.savoir-grid,.contact-grid,.footer-top{grid-template-columns:1fr;gap:32px}.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <a href="#" class="logo">Cake <span>Délice</span></a>
+  <nav>
+    <a href="#creations">Créations</a>
+    <a href="#savoir-faire">Notre ADN</a>
+    <a href="#temoignages">Avis</a>
+    <a href="#contact" class="nav-cta">Commander</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Pâtisserie Artisanale · Paris · Sur Mesure</div>
+    <h1>L'art du gâteau<em>réinventé pour vous</em></h1>
+    <p>Chaque création est une œuvre unique, pensée pour votre moment le plus précieux. Gâteaux de mariage, anniversaire et baptême entièrement personnalisés.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Commander ma création</a>
+      <a href="#creations" class="btn-secondary">Découvrir</a>
+    </div>
+  </div>
+</section>
+
+<section class="creations" id="creations">
+  <div class="text-center reveal">
+    <span class="section-label">Nos Spécialités</span>
+    <h2 class="section-title">Des créations qui<em>vous ressemblent</em></h2>
+    <p class="section-subtitle">Chaque gâteau est imaginé, designé et réalisé à la main par Lise, avec des ingrédients sélectionnés pour leur qualité.</p>
+  </div>
+  <div class="creations-grid">
+    <div class="creation-card reveal"><span class="creation-icon">💍</span><h3>Gâteaux de Mariage</h3><p>Un chef-d'œuvre comestible pour le plus beau jour de votre vie.</p><span class="creation-tag">Sur devis · Dégustation offerte</span></div>
+    <div class="creation-card reveal"><span class="creation-icon">🎂</span><h3>Anniversaires</h3><p>Surprenez vos proches avec un gâteau aussi unique qu'eux.</p><span class="creation-tag">À partir de 80€</span></div>
+    <div class="creation-card reveal"><span class="creation-icon">🍼</span><h3>Baptêmes & Naissances</h3><p>Célébrez l'arrivée de votre petit trésor avec une douceur délicate.</p><span class="creation-tag">À partir de 65€</span></div>
+  </div>
+</section>
+
+<section class="savoir-faire" id="savoir-faire">
+  <div class="savoir-grid">
+    <div class="reveal">
+      <span class="section-label" style="color:var(--rose)">Notre ADN</span>
+      <h2 class="section-title" style="color:white">L'artisanat au<em style="color:var(--rose)">cœur de tout</em></h2>
+      <p class="section-subtitle" style="color:rgba(255,255,255,0.7)">Fondée par Lise, Cake Délice est née d'une conviction : chaque moment mérite une douceur à la hauteur de son émotion.</p>
+      <div class="savoir-values">
+        <div class="value-item"><span class="value-num">01</span><div class="value-content"><h4>100% Fait Maison</h4><p>Chaque création est réalisée dans notre atelier parisien.</p></div></div>
+        <div class="value-item"><span class="value-num">02</span><div class="value-content"><h4>Ingrédients Sélectionnés</h4><p>Beurre supérieur, chocolats de couverture, fruits de saison.</p></div></div>
+        <div class="value-item"><span class="value-num">03</span><div class="value-content"><h4>Entièrement Personnalisé</h4><p>Aucune création n'est identique. Votre gâteau est unique.</p></div></div>
+      </div>
+    </div>
+    <div class="savoir-visual reveal">
+      <div class="visual-card"><span class="visual-num">8+</span><span class="visual-label">Années d'expérience</span></div>
+      <div class="visual-card"><span class="visual-num">500+</span><span class="visual-label">Créations réalisées</span></div>
+      <div class="visual-card"><span class="visual-num">98%</span><span class="visual-label">Clients satisfaits</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--beige)" id="temoignages">
+  <div class="text-center reveal">
+    <span class="section-label">Ils nous font confiance</span>
+    <h2 class="section-title">Ce qu'ils<em>disent de nous</em></h2>
+  </div>
+  <div class="temo-grid">
+    <div class="temo-card reveal"><span class="stars">★★★★★</span><p>Le gâteau de notre mariage était absolument magnifique. Lise a su retranscrire exactement notre vision !</p><div class="temo-author"><div class="author-avatar">A</div><div><span class="author-name">Amélie & Thomas</span><span class="author-event">Mariage · Juin 2025</span></div></div></div>
+    <div class="temo-card reveal"><span class="stars">★★★★★</span><p>Pour les 30 ans de ma fille, Lise a réalisé ma vision à la perfection, en ajoutant même des détails auxquels je n'avais pas pensé.</p><div class="temo-author"><div class="author-avatar">M</div><div><span class="author-name">Marie-Claire</span><span class="author-event">Anniversaire · Mars 2025</span></div></div></div>
+    <div class="temo-card reveal"><span class="stars">★★★★★</span><p>Cake Délice a sublimé le baptême de notre petite Inès. Une création délicate, raffinée, inoubliable.</p><div class="temo-author"><div class="author-avatar">S</div><div><span class="author-name">Sarah & Julien</span><span class="author-event">Baptême · Sept 2025</span></div></div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="background:var(--white)">
+  <div class="contact-grid">
+    <div>
+      <span class="section-label">Nous contacter</span>
+      <h2 class="section-title reveal">Votre projet<em>commence ici</em></h2>
+      <p class="section-subtitle reveal">Partagez-nous votre vision. Nous vous répondons sous 48h avec une proposition personnalisée.</p>
+      <div style="margin-top:36px">
+        <div class="info-item reveal"><div class="info-icon">📍</div><div><span class="info-label">Atelier</span><span class="info-value">12 rue des Artisans, Paris 75011</span></div></div>
+        <div class="info-item reveal"><div class="info-icon">🕐</div><div><span class="info-label">Horaires</span><span class="info-value">Mardi – Samedi · 9h – 19h</span></div></div>
+        <div class="info-item reveal"><div class="info-icon">📧</div><div><span class="info-label">Email</span><span class="info-value">bonjour@cakedelice.fr</span></div></div>
+        <div class="info-item reveal"><div class="info-icon">📞</div><div><span class="info-label">Téléphone</span><span class="info-value">+33 6 00 00 00 00</span></div></div>
+      </div>
+    </div>
+    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="form-group"><label>Prénom</label><input type="text" placeholder="Sophie" required></div>
+        <div class="form-group"><label>Nom</label><input type="text" placeholder="Martin" required></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="sophie@email.com" required></div>
+      <div class="form-group"><label>Type de création</label><select required><option value="" disabled selected>Choisissez...</option><option>Gâteau de mariage</option><option>Anniversaire</option><option>Baptême / Naissance</option><option>Autre occasion</option></select></div>
+      <div class="form-group"><label>Date de l'événement</label><input type="date" required></div>
+      <div class="form-group"><label>Décrivez votre rêve</label><textarea placeholder="Parlez-nous de votre événement, vos couleurs préférées, le nombre de personnes..."></textarea></div>
+      <button type="submit" class="btn-form">Envoyer ma demande ✨</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><span style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--rose);letter-spacing:1px;margin-bottom:16px;display:block">Cake <span style="color:var(--gold)">Délice</span></span><p>Pâtisserie artisanale parisienne spécialisée dans les créations sur mesure.</p></div>
+    <div class="footer-col"><h4>Navigation</h4><a href="#creations">Nos créations</a><a href="#savoir-faire">Notre ADN</a><a href="#temoignages">Avis</a><a href="#contact">Commander</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="#">Paris 75011</a><a href="#">bonjour@cakedelice.fr</a><a href="#">Mar–Sam · 9h–19h</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Cake Délice — Tous droits réservés</span>
+    <div class="socials"><a href="#" class="social-link">📷</a><a href="#" class="social-link">👍</a></div>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+window.addEventListener('scroll',()=>{document.querySelector('header').style.boxShadow=window.scrollY>50?'0 4px 30px rgba(44,24,16,0.1)':'none'});
+function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('.btn-form');b.textContent='✅ Envoyée !';b.style.background='#4CAF50';setTimeout(()=>{b.textContent='Envoyer ma demande ✨';b.style.background=''},3000)}
+</script>
+</body>
 </html>
