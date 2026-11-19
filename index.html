@@ -3,21 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cake Délice — Pâtisserie artisanale à Valence</title>
+<title>Cake Délice — Layer cakes et bento cakes à Valence</title>
 <meta name="description" content="Commandez vos layer cakes, bento cakes et gâteaux sur-mesure faits main par Lise, à Valence. Livraison offerte dès 30 € sur Valence.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#FBF6EF">
 <link rel="canonical" href="https://cake-delice.fr/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Cake Délice">
-<meta property="og:title" content="Cake Délice — Pâtisserie artisanale à Valence">
-<meta property="og:description" content="Commandez vos gâteaux sur-mesure faits main, à Valence.">
+<meta property="og:title" content="Cake Délice — Layer cakes et bento cakes à Valence">
+<meta property="og:description" content="Commandez vos layer cakes, bento cakes et gâteaux sur-mesure faits main par Lise, à Valence. Livraison offerte dès 30 € sur Valence.">
 <meta property="og:url" content="https://cake-delice.fr/">
 <meta property="og:image" content="https://cake-delice.fr/assets/photos/jardin-roses.jpg">
+<meta property="og:image:alt" content="Création de Cake Délice, pâtisserie artisanale à Valence">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cake-delice.fr/assets/photos/jardin-roses.jpg">
 <script type="application/ld+json">
-{ "@context":"https://schema.org","@type":"Bakery","name":"Cake Délice",
+{ "@context":"https://schema.org","@type":"Bakery",
+  "@id":"https://cake-delice.fr/#cake-delice",
+  "logo":"https://cake-delice.fr/icon-512.png","name":"Cake Délice",
   "description":"Pâtisserie artisanale à Valence : layer cakes, bento cakes et gâteaux sur-mesure faits main.",
   "image":"https://cake-delice.fr/assets/photos/jardin-roses.jpg","url":"https://cake-delice.fr/",
   "email":"cakedelice26000@gmail.com","telephone":"+33782929694","priceRange":"€€",
@@ -168,23 +173,23 @@ footer{background:#160A12;color:rgba(246,220,218,.7);padding:clamp(36px,5vw,56px
 
 <header class="appbar" data-repere="En-tête (logo et menu)">
   <div class="appbar__in">
-    <a class="marque" href="index.html">Cake Délice</a>
+    <a class="marque" href="/">Cake Délice</a>
     <nav class="appbar__nav" aria-label="Navigation principale">
-      <a href="creations.html">Nos créations</a>
-      <a href="histoire.html">Notre histoire</a>
-      <a href="contact.html">Contact</a>
+      <a href="/creations">Nos créations</a>
+      <a href="/histoire">Notre histoire</a>
+      <a href="/contact">Contact</a>
     </nav>
     <div class="appbar__right">
-      <a class="btn btn--plein" href="commander.html" style="min-height:44px;padding:0 22px;">Commander</a>
+      <a class="btn btn--plein" href="/commander" style="min-height:44px;padding:0 22px;">Commander</a>
       <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 <nav class="menu-mobile" id="menu-mobile" aria-label="Menu mobile" data-repere="Menu mobile">
-  <a href="creations.html">Nos créations</a>
-  <a href="histoire.html">Notre histoire</a>
-  <a href="contact.html">Contact</a>
-  <a class="cmd" href="commander.html">Commander</a>
+  <a href="/creations">Nos créations</a>
+  <a href="/histoire">Notre histoire</a>
+  <a href="/contact">Contact</a>
+  <a class="cmd" href="/commander">Commander</a>
 </nav>
 
 <main>
@@ -196,7 +201,7 @@ footer{background:#160A12;color:rgba(246,220,218,.7);padding:clamp(36px,5vw,56px
         <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.9L19 9l-4.1 1.1L12 15l-1.9-4.9L6 9l4.1-1.1z"/></svg> Sur commande</span>
         <h1>Votre gâteau <em>sur-mesure</em>, pour vos grands jours</h1>
         <p>Layer cakes, bento cakes et créations personnalisées, faits main par Lise à Valence. Commandez, régalez vos invités.</p>
-        <a class="btn btn--clair" href="commander.html">Commander mon gâteau</a>
+        <a class="btn btn--clair" href="/commander">Commander mon gâteau</a>
       </div>
     </div>
   </div></section>
@@ -207,7 +212,7 @@ footer{background:#160A12;color:rgba(246,220,218,.7);padding:clamp(36px,5vw,56px
       <h2 class="h-sec">Une envie sucrée ?</h2>
       <span class="pill-info"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Livraison &amp; retrait sur rendez-vous</span>
     </div>
-    <form class="search" action="creations.html" method="get" role="search">
+    <form class="search" action="/creations" method="get" role="search">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <input type="search" name="q" placeholder="Rechercher une création (layer cake, bento…)" aria-label="Rechercher une création">
       <button type="submit">Rechercher</button>
@@ -218,10 +223,10 @@ footer{background:#160A12;color:rgba(246,220,218,.7);padding:clamp(36px,5vw,56px
   <section class="carte" data-repere="Que souhaitez-vous ?"><div class="wrap">
     <div class="carte__head"><span class="eyebrow">La carte</span><h2 class="h-sec">Que souhaitez-vous ?</h2></div>
     <div class="tiles">
-      <a class="tile" href="commander.html" data-repere="Vignette « Layer cakes »"><span class="tile__img"><img src="assets/photos/coeur-rouge.jpg" alt="Layer cakes"></span><span class="tile__nom">Layer cakes</span></a>
-      <a class="tile" href="commander.html" data-repere="Vignette « Bento cakes »"><span class="tile__img"><img src="assets/photos/bento-cerisier.jpg" alt="Bento cakes"></span><span class="tile__nom">Bento cakes</span></a>
-      <a class="tile" href="commander.html" data-repere="Vignette « Cookies »"><span class="tile__img"><img src="assets/photos/cookies-chocolat.jpg" alt="Cookies"></span><span class="tile__nom">Cookies</span></a>
-      <a class="tile" href="commander.html" data-repere="Vignette « Pâtisseries »"><span class="tile__img"><img src="assets/photos/cookies-framboise.jpg" alt="Pâtisseries"></span><span class="tile__nom">Pâtisseries</span></a>
+      <a class="tile" href="/commander" data-repere="Vignette « Layer cakes »"><span class="tile__img"><img loading="lazy" decoding="async" src="assets/photos/coeur-rouge.jpg" alt="Layer cakes"></span><span class="tile__nom">Layer cakes</span></a>
+      <a class="tile" href="/commander" data-repere="Vignette « Bento cakes »"><span class="tile__img"><img loading="lazy" decoding="async" src="assets/photos/bento-cerisier.jpg" alt="Bento cakes"></span><span class="tile__nom">Bento cakes</span></a>
+      <a class="tile" href="/commander" data-repere="Vignette « Cookies »"><span class="tile__img"><img loading="lazy" decoding="async" src="assets/photos/cookies-chocolat.jpg" alt="Cookies"></span><span class="tile__nom">Cookies</span></a>
+      <a class="tile" href="/commander" data-repere="Vignette « Pâtisseries »"><span class="tile__img"><img loading="lazy" decoding="async" src="assets/photos/cookies-framboise.jpg" alt="Pâtisseries"></span><span class="tile__nom">Pâtisseries</span></a>
     </div>
   </div></section>
 
@@ -229,21 +234,21 @@ footer{background:#160A12;color:rgba(246,220,218,.7);padding:clamp(36px,5vw,56px
   <section class="produits" data-repere="Les plus demandés"><div class="wrap">
     <span class="eyebrow">Nos créations</span><h2 class="h-sec">Les plus demandés</h2>
     <div class="pg">
-      <article class="pcard reveal" data-repere="Carte « Jardin de roses »"><a href="commander.html"><div class="pcard__img"><img src="assets/photos/jardin-roses.jpg" alt="Jardin de roses"></div></a>
+      <article class="pcard reveal" data-repere="Carte « Jardin de roses »"><a href="/commander"><div class="pcard__img"><img loading="lazy" decoding="async" src="assets/photos/jardin-roses.jpg" alt="Jardin de roses"></div></a>
         <div class="pcard__body"><span class="pcard__cat">Layer cake</span><span class="pcard__nom">Jardin de roses</span>
-          <div class="pcard__bas"><span class="pcard__prix">à partir de 60 €</span><a class="pcard__cmd" href="commander.html">Commander</a></div></div></article>
-      <article class="pcard reveal" data-repere="Carte « Saint-Valentin »"><a href="commander.html"><div class="pcard__img"><img src="assets/photos/bento-cerisier.jpg" alt="Bento cake Saint-Valentin"></div></a>
+          <div class="pcard__bas"><span class="pcard__prix">à partir de 60 €</span><a class="pcard__cmd" href="/commander">Commander</a></div></div></article>
+      <article class="pcard reveal" data-repere="Carte « Saint-Valentin »"><a href="/commander"><div class="pcard__img"><img loading="lazy" decoding="async" src="assets/photos/bento-cerisier.jpg" alt="Bento cake Saint-Valentin"></div></a>
         <div class="pcard__body"><span class="pcard__cat">Bento cake</span><span class="pcard__nom">Saint-Valentin</span>
-          <div class="pcard__bas"><span class="pcard__prix">à partir de 15 €</span><a class="pcard__cmd" href="commander.html">Commander</a></div></div></article>
-      <article class="pcard reveal" data-repere="Carte « Cœur passion »"><a href="commander.html"><div class="pcard__img"><img src="assets/photos/coeur-rouge.jpg" alt="Cœur passion"></div></a>
+          <div class="pcard__bas"><span class="pcard__prix">à partir de 15 €</span><a class="pcard__cmd" href="/commander">Commander</a></div></div></article>
+      <article class="pcard reveal" data-repere="Carte « Cœur passion »"><a href="/commander"><div class="pcard__img"><img loading="lazy" decoding="async" src="assets/photos/coeur-rouge.jpg" alt="Cœur passion"></div></a>
         <div class="pcard__body"><span class="pcard__cat">Layer cake</span><span class="pcard__nom">Cœur passion</span>
-          <div class="pcard__bas"><span class="pcard__prix">dès 20 €</span><a class="pcard__cmd" href="commander.html">Commander</a></div></div></article>
-      <article class="pcard reveal" data-repere="Carte « Italian cake »"><a href="commander.html"><div class="pcard__img"><img src="assets/photos/vintage-marbre.jpg" alt="Italian cake"></div></a>
+          <div class="pcard__bas"><span class="pcard__prix">dès 20 €</span><a class="pcard__cmd" href="/commander">Commander</a></div></div></article>
+      <article class="pcard reveal" data-repere="Carte « Italian cake »"><a href="/commander"><div class="pcard__img"><img loading="lazy" decoding="async" src="assets/photos/vintage-marbre.jpg" alt="Italian cake"></div></a>
         <div class="pcard__body"><span class="pcard__cat">Layer cake</span><span class="pcard__nom">Italian cake</span>
-          <div class="pcard__bas"><span class="pcard__prix">à partir de 50 €</span><a class="pcard__cmd" href="commander.html">Commander</a></div></div></article>
-      <article class="pcard reveal" data-repere="Carte « Framboise &amp; chocolat blanc »"><a href="commander.html"><div class="pcard__img"><img src="assets/photos/cookies-framboise.jpg" alt="Cookies framboise et chocolat blanc"></div></a>
+          <div class="pcard__bas"><span class="pcard__prix">à partir de 50 €</span><a class="pcard__cmd" href="/commander">Commander</a></div></div></article>
+      <article class="pcard reveal" data-repere="Carte « Framboise &amp; chocolat blanc »"><a href="/commander"><div class="pcard__img"><img loading="lazy" decoding="async" src="assets/photos/cookies-framboise.jpg" alt="Cookies framboise et chocolat blanc"></div></a>
         <div class="pcard__body"><span class="pcard__cat">Cookies</span><span class="pcard__nom">Framboise &amp; chocolat blanc</span>
-          <div class="pcard__bas"><span class="pcard__prix">3 € pièce</span><a class="pcard__cmd" href="commander.html">Commander</a></div></div></article>
+          <div class="pcard__bas"><span class="pcard__prix">3 € pièce</span><a class="pcard__cmd" href="/commander">Commander</a></div></div></article>
     </div>
   </div></section>
 
@@ -268,17 +273,17 @@ footer{background:#160A12;color:rgba(246,220,218,.7);padding:clamp(36px,5vw,56px
   <section class="cta" data-repere="Encadré « Un gâteau en tête ? »"><div class="wrap"><div class="cta__box">
     <h2>Un gâteau en tête ?</h2>
     <p>Dites-moi votre occasion, vos envies et le nombre de parts — je vous prépare une création unique, rien que pour vous.</p>
-    <a class="btn btn--clair" href="commander.html">Commander mon gâteau</a>
+    <a class="btn btn--clair" href="/commander">Commander mon gâteau</a>
   </div></div></section>
 </main>
 
 <footer data-repere="Pied de page"><div class="wrap">
   <div class="foot">
     <div><div class="marque" style="font-family:var(--font-script)">Cake Délice</div><p style="margin:12px 0 0;max-width:280px">Pâtisserie artisanale à Valence. Layer cakes, bento cakes et gâteaux sur-mesure faits main.</p></div>
-    <div><h4>Navigation</h4><a href="creations.html">Nos créations</a><a href="histoire.html">Notre histoire</a><a href="commander.html">Commander</a><a href="contact.html">Contact</a></div>
+    <div><h4>Navigation</h4><a href="/creations">Nos créations</a><a href="/histoire">Notre histoire</a><a href="/commander">Commander</a><a href="/contact">Contact</a></div>
     <div><h4>Contact</h4><a href="tel:+33782929694">07 82 92 96 94</a><a href="mailto:cakedelice26000@gmail.com">cakedelice26000@gmail.com</a><a href="https://www.instagram.com/cakedelice26" target="_blank" rel="noopener">Instagram @cakedelice26</a><span style="display:block;margin-top:6px">Valence &amp; alentours (35 km)</span></div>
   </div>
-  <div class="foot__bas"><span>© 2026 Cake Délice — Pâtisserie artisanale, Valence · <a href="cgv.html">CGV</a> · <a href="mentions-legales.html">Mentions légales</a></span><span>Site créé par <a href="https://dwtdigital.fr" target="_blank" rel="noopener">DWT Digital</a></span></div>
+  <div class="foot__bas"><span>© 2026 Cake Délice — Pâtisserie artisanale, Valence · <a href="/cgv">CGV</a> · <a href="/mentions-legales">Mentions légales</a></span><span>Site créé par <a href="https://dwtdigital.fr" target="_blank" rel="noopener">DWT Digital</a></span></div>
 </div></footer>
 
 <script>

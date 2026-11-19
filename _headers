@@ -6,3 +6,10 @@
 
 /assets/*
   Cache-Control: public, max-age=86400
+
+# L'adresse technique cake-delice.pages.dev ne doit pas apparaître dans Google (seul cake-delice.fr compte)
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
